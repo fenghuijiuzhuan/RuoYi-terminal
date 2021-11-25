@@ -1,3 +1,8 @@
+<!--
+ * @path        : \RuoYi-terminal\src\layout\components\AppMain.vue
+ * @message     : 
+ * @Author      : yvangod
+-->
 <template>
   <section class="app-main">
     <transition name="fade-transform" mode="out-in">
@@ -32,6 +37,7 @@ export default {
 }
 
 .fixed-header+.app-main {
+  height: 100vh;
   padding-top: 50px;
 }
 

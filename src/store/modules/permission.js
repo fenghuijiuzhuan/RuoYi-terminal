@@ -3,6 +3,7 @@ import { getRouters } from '@/api/menu'
 import Layout from '@/layout/index'
 import ParentView from '@/components/ParentView'
 import InnerLink from '@/layout/components/InnerLink'
+import EntryView from '@/views/components/entry'
 
 const permission = {
   state: {
@@ -58,7 +59,21 @@ const permission = {
 function filterAsyncRouter(asyncRouterMap, lastRouter = false, type = false) {
   return asyncRouterMap.filter(route => {
     if (type && route.children) {
-      route.children = filterChildren(route.children)
+      // 添加一个入口页组件
+      route.redirect = route.path + '/entry'
+      var entryRoute = {
+        name: route.name + 'Entry',
+        path: route.path + '/entry',
+        meta: {
+          ...route.meta
+        },
+        component: 'EntryView',
+        props: {
+          pageList: route.children
+        }
+      }
+      route.children.unshift(entryRoute)
+      route.children = filterChildren(route.children, false, route)
     }
     if (route.component) {
       // Layout ParentView 组件特殊处理
@@ -68,6 +83,8 @@ function filterAsyncRouter(asyncRouterMap, lastRouter = false, type = false) {
         route.component = ParentView
       } else if (route.component === 'InnerLink') {
         route.component = InnerLink
+      } else if (route.component === 'EntryView') {
+        route.component = EntryView
       } else {
         route.component = loadView(route.component)
       }
