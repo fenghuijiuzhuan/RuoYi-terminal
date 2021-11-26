@@ -37,7 +37,6 @@ export default {
 }
 
 .fixed-header+.app-main {
-  height: 100vh;
   padding-top: 50px;
 }
 

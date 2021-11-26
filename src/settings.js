@@ -1,3 +1,8 @@
+/*
+ * @path        : \RuoYi-terminal\src\settings.js
+ * @message     : 
+ * @Author      : yvangod
+ */
 module.exports = {
   /**
    * 侧边栏主题 深色主题theme-dark，浅色主题theme-light
@@ -22,7 +27,7 @@ module.exports = {
   /**
    * 是否固定头部
    */
-  fixedHeader: false,
+  fixedHeader: true,
 
   /**
    * 是否显示logo

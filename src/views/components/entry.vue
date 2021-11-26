@@ -17,6 +17,17 @@
           <p class="tip" v-html="item.tipText"></p>
         </div>
       </template>
+      <template v-for="(item, index) in pageList">
+        <div
+          class="entry"
+          :key="item.path + index"
+          v-if="item.path !== $route.path"
+          @click="handleEntry(item)"
+        >
+          <p class="title">{{ item.meta.title }}</p>
+          <p class="tip" v-html="item.tipText"></p>
+        </div>
+      </template>
     </div>
   </div>
 </template>
@@ -42,17 +53,20 @@ export default {
 .entry-container {
   width: 100%;
   height: 100%;
-  padding: 100px;
   .entrys-wrap {
+    padding: 100px;
+    width: 100%;
+    height: 100%;
     overflow: auto;
     display: flex;
     justify-content: space-around;
     flex-flow: wrap;
   }
   .entry {
-    width: 20%;
-    min-width: 120px;
+    width: 16%;
+    min-width: 180px;
     height: 250px;
+    margin: 0 30px 40px;
     background-color: #dcdee0;
     text-align: center;
     display: flex;
@@ -60,6 +74,7 @@ export default {
     justify-content: flex-end;
     color: #fff;
     font-weight: 500;
+    border-radius: 10px;
   }
   .title {
     font-size: 22px;
