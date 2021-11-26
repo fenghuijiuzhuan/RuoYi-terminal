@@ -17,17 +17,6 @@
           <p class="tip" v-html="item.tipText"></p>
         </div>
       </template>
-      <template v-for="(item, index) in pageList">
-        <div
-          class="entry"
-          :key="item.path + index"
-          v-if="item.path !== $route.path"
-          @click="handleEntry(item)"
-        >
-          <p class="title">{{ item.meta.title }}</p>
-          <p class="tip" v-html="item.tipText"></p>
-        </div>
-      </template>
     </div>
   </div>
 </template>
