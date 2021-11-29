@@ -56,7 +56,7 @@ export default {
     min-width: 180px;
     height: 250px;
     margin: 0 30px 40px;
-    background-color: #dcdee0;
+    background-color: #0080ff;
     text-align: center;
     display: flex;
     flex-direction: column;

@@ -14,8 +14,8 @@ export default {
   name: 'RuoYiTerminalGit',
   data() {
     return {
-      url: 'https://github.com/fenghuijiuzhuan/RuoYi-terminal.git'
-      // url: 'https://gitee.com/yvan_gordon/RuoYi-terminal.git'
+      // url: 'https://github.com/fenghuijiuzhuan/RuoYi-terminal.git'
+      url: 'https://gitee.com/yvan_gordon/RuoYi-terminal.git'
     }
   },
   methods: {

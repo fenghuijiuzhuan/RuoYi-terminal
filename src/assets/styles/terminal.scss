@@ -1,4 +1,4 @@
-// 可以更方便的修改header的高度
+// 更方便的修改header的高度
 $navbarHeight: 50px;
 $tagsViewHeight: 34px;
 #app {
@@ -23,43 +23,42 @@ $tagsViewHeight: 34px;
       padding-top: #{$navbarHeight + $tagsViewHeight};
     }
   }
-
 }
 
-#app{
-  .fixed-header{
-    background: url('/static/nav.png') no-repeat center/cover;
+#app {
+  .fixed-header {
+    background: url('~@/assets/images/nav.png') no-repeat center/cover;
   }
-  .tags-view-container{
+  .tags-view-container {
     background: none;
     box-shadow: none;
     border: none;
-    .el-scrollbar__wrap{
+    .el-scrollbar__wrap {
       height: 51px;
     }
-    .tags-view-item{
+    .tags-view-item {
       vertical-align: top;
       margin-top: 0;
       height: 32px;
       line-height: 31px;
       font-size: 16px;
-      background-color: #3D72D1;
+      background-color: #3d72d1;
       color: #fff;
-      border: 1px solid #97BCFF;
-      &:before{
+      border: 1px solid #97bcff;
+      &:before {
         display: none;
       }
     }
-    .tags-view-item.active{
+    .tags-view-item.active {
       height: 34px;
       line-height: 34px;
       border-radius: 4px 4px 0 0;
-      border-color: #fff!important;
-      background-color: #fff!important;
-      color: #4C84EB;
+      border-color: #fff !important;
+      background-color: #fff !important;
+      color: #4c84eb;
     }
   }
-  .navbar{
+  .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -67,17 +66,20 @@ $tagsViewHeight: 34px;
     box-shadow: none;
     color: #fff;
     padding: 0 16px;
-    .right-menu{
+    .right-menu {
       float: unset;
-      .right-menu-item{
+      .right-menu-item {
         color: inherit;
       }
     }
   }
-  
-  #terminal-logo{
+
+  #terminal-logo {
     font-size: 32px;
     line-height: 50px;
   }
-  
+
+  .entry-container {
+    background: url('~@/assets/images/main.png') no-repeat center/cover;
+  }
 }

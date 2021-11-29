@@ -12,7 +12,7 @@
         <search id="header-search" class="right-menu-item" />
         
         <el-tooltip content="源码地址" effect="dark" placement="bottom">
-          <ruo-yi-git id="ruoyi-termainl-git" class="right-menu-item hover-effect" />
+          <ruo-yi-terminal-git id="ruoyi-termainl-git" class="right-menu-item hover-effect" />
         </el-tooltip>
 
         <el-tooltip content="若依源码地址" effect="dark" placement="bottom">
@@ -46,6 +46,7 @@ import SizeSelect from '@/components/SizeSelect'
 import Search from '@/components/HeaderSearch'
 import RuoYiGit from '@/components/RuoYi/Git'
 import RuoYiDoc from '@/components/RuoYi/Doc'
+import RuoYiTerminalGit from '@/components/RuoYiTerminal/Git'
 import UserStatus from '@/components/userStatus'
 
 export default {
@@ -58,7 +59,8 @@ export default {
     Search,
     UserStatus,
     RuoYiGit,
-    RuoYiDoc
+    RuoYiDoc,
+    RuoYiTerminalGit
   },
   computed: {
     ...mapGetters([
